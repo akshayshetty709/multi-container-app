@@ -25,6 +25,8 @@ EC2 Instance
          ▼
       EBS Volume
 
+
+
 Architecture
 
 User → EC2 Instance → Docker Compose → Web Container (Node.js) → Database Container (MySQL) → EBS Volume for persistent storage.
