@@ -3,6 +3,28 @@ Project Overview
 
 This project demonstrates how to deploy a multi-container web application on an AWS EC2 instance using Docker and Docker Compose. The application consists of a Node.js web server and a MySQL database container with persistent storage using AWS EBS.
 
+User Browser
+      │
+      │ HTTP (Port 80)
+      ▼
+EC2 Instance
+      │
+      │ Docker Compose
+      │
+ ┌───────────────┐
+ │ Web Container │  (Node.js)
+ └───────▲───────┘
+         │
+         │ Database Connection
+         ▼
+ ┌───────────────┐
+ │ DB Container  │ (MySQL)
+ └───────▲───────┘
+         │
+         │ Persistent Storage
+         ▼
+      EBS Volume
+
 Architecture
 
 User → EC2 Instance → Docker Compose → Web Container (Node.js) → Database Container (MySQL) → EBS Volume for persistent storage.
