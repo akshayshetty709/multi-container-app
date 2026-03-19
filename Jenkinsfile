@@ -6,7 +6,7 @@ stages {
             git branch: "https://github.com/akshayshetty709/multi-container-app.git", branch: "main"
      }
 }
- stage ('build") {
+ stage ('build') {
     steps {
             docker compose up -d
 }
