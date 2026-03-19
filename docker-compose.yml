@@ -1,15 +1,15 @@
 services:
 
   web:
-    build: ./web   //Docker will build an image using the Dockerfile inside the ./web directory. 
+    build: ./web   #Docker will build an image using the Dockerfile inside the ./web directory. 
     container_name: node-app
     ports:
       - "80:3000"
-         // host port : container port
+        #host port : container port
     depends_on:
-      - db   // web container start only after db container start
+      - db   #web container start only after db container start
     environment:
-      DB_HOST: db //This creates an environment variable inside the container
+      DB_HOST: db #This creates an environment variable inside the container
 
   db:
     image: mysql:latest
@@ -18,4 +18,4 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: mydb
     volumes:
-      - /data/mysql:/var/lib/mysql  // mounting data to the ebs volume so that if the conatiner stops data should not lost
+      - /data/mysql:/var/lib/mysql  #mounting data to the ebs volume so that if the conatiner stops data should not lost
