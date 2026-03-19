@@ -8,7 +8,13 @@ stages {
 }
  stage ('build") {
     steps {
-            docker compose up -d
+           sh "docker compose up -d"
+
+}
+}
+stage ('deploy') {
+steps {
+sh "docker ps"
 }
 }
 }
