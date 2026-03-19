@@ -19,7 +19,7 @@ db.connect(err => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Multi Container App Running Successfully 🚀");
+  res.send("Multi Container App Deployed Successfully 🚀");
 });
 
 app.listen(3000, () => {
